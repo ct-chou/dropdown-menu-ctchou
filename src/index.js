@@ -1,11 +1,20 @@
 import "./style.css";
 
 const dropdownBtn = document.getElementById("dropdown-btn");
+const menuItems = document.querySelector(".menu-all");
 
-dropdownBtn.addEventListener("click", () => {
-    const menuItems = document.querySelectorAll(".menu-item");
-    menuItems.forEach((menuItem) => {
-        menuItem.classList.toggle("show");
-    });
-});
+const toggleMenu = () => {
+    menuItems.classList.toggle("hidden");
+};
+
+const hideMenu = () => {
+    menuItems.classList.add("hidden");
+};
+
+dropdownBtn.addEventListener("click", toggleMenu);
+dropdownBtn.addEventListener("mouseover", toggleMenu); 
+
+menuItems.addEventListener("mouseleave", hideMenu);
+
+
     

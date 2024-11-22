@@ -1,7 +1,19 @@
-.hidden {
-    display: none;
+#menu-container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
 }
 
-.show {
-    display:flex;
+.menu-all {
+    display: inline-block;
+    width: auto;
+}
+
+/* .menu-item {
+    display: block;
+    width: auto;
+} */
+
+.hidden {
+    display: none;
 }
